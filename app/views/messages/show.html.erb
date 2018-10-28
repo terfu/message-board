@@ -1,0 +1,22 @@
+<h1>id:<%= @message.id %>のメッセージ詳細</h1>
+
+<p><%= @message.content %></p>
+
+<%= link_to '一覧に戻る', messages_path %>
+<%= link_to 'このメッセージを編集する', edit_message_path(@message) %>
+<%= link_to 'このメッセージを削除する', @message, method: :delete, data:{ confirm: '本当に削除してよろしいですか？' } %>
+
+
+
+
+
+
+
+
+
+
+ <!-- message_pathのidと関連付けするパターン -->
+ <!-- <%= message_path(@message) %><br> -->
+ <!-- <%= message_path(1) %><br> -->
+ <!-- <%= message_path(id:1) %><br> -->
+ <!-- <%= message_path(id: @message.id) %><br> -->
